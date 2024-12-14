@@ -27,8 +27,7 @@
 
 class Bench {
 public:
-    Bench(int warmupCount = 0);
-    ~Bench();
+    Bench(const int = 0);
 
     void mark();
     void measure();
@@ -49,7 +48,7 @@ private:
     long long minTime;
     long long maxTime;
     int size;
-    std::map<long long, long long>* results;
+    std::map<long long, long long> results;
     std::chrono::steady_clock::time_point startTime;
     
     static std::string formatWithCommas(long long value);
